@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CQPickerView_Example' do
+  pod 'CQPickerView', :path => '../'
+
+  target 'CQPickerView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
