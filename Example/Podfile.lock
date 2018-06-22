@@ -1,0 +1,16 @@
+PODS:
+  - CQPickerView (0.1.0)
+
+DEPENDENCIES:
+  - CQPickerView (from `../`)
+
+EXTERNAL SOURCES:
+  CQPickerView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CQPickerView: 2916eb53165230ffbe2a23e1083cf909b6463e66
+
+PODFILE CHECKSUM: 8011008a84041954d9a3da604a9b10ae29b5c8e2
+
+COCOAPODS: 1.5.2

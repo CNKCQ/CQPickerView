@@ -1,0 +1,6 @@
+framework module CQPickerView {
+  umbrella header "CQPickerView-umbrella.h"
+
+  export *
+  module * { export * }
+}
