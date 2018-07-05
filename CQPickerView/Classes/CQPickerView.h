@@ -31,8 +31,8 @@ typedef NS_ENUM(NSInteger, CQPickerViewDirection)
 - (void)pickerView:(CQPickerView *)pickerView scrollViewDidEndDecelerating:(UIScrollView *)scrollView;
 - (void)pickerView:(CQPickerView *)pickerView scrollViewDidEndDragging:(UIScrollView *)scrollView;
 
-- (void)pickerView:(CQPickerView *)pickerView willSelectItem:(CQPickerEntity *)month;
-- (void)pickerView:(CQPickerView *)pickerView didSelectItem:(CQPickerEntity *)month;
+- (void)pickerView:(CQPickerView *)pickerView willSelectItem:(CQPickerEntity *)item;
+- (void)pickerView:(CQPickerView *)pickerView didSelectItem:(CQPickerEntity *)item;
 
 @end
 
@@ -49,7 +49,7 @@ typedef NS_ENUM(NSInteger, CQPickerViewDirection)
  */
 @property (nonatomic, strong) UIColor *backgroundPickerColor;
 
-/* 月份显示的字体大小 */
+/* 显示的字体大小 */
 @property (nonatomic, assign) CGFloat cellLabelFontSize;
 
 /* 文字缩放的大小 */
@@ -58,12 +58,12 @@ typedef NS_ENUM(NSInteger, CQPickerViewDirection)
 @property (nonatomic, readonly) CGSize itemCellSize;
 
 /*
- * 激活的月份区间
+ * 激活区间
  */
 @property (nonatomic, readonly) NSRange activeItems;
 
 /*
- * 当前年月
+ * 当前选中 item
  */
 @property (nonatomic, assign) NSInteger currentItem;
 
@@ -87,5 +87,6 @@ typedef NS_ENUM(NSInteger, CQPickerViewDirection)
  * Cell
  */
 - (CQPickerViewCell *)cellForItem:(CQPickerEntity *)item;
+
 
 @end

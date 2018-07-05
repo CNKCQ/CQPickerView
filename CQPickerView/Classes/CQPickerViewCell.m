@@ -20,12 +20,12 @@
 - (UITableViewCell *)initWithSize:(CGSize)size reuseIdentifier:(NSString *)reuseIdentifier
 {
     if (self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier]) {
-        
+
         if (CGSizeEqualToSize(size, CGSizeZero))
             [NSException raise:NSInvalidArgumentException format:@"CQPickerViewCell size can't be zero!"];
         else
             self.cellSize = size;
-        
+
         [self applyCellStyle];
     }
     return self;
@@ -41,16 +41,16 @@
 - (void)applyCellStyle
 {
     UIView* containingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.cellSize.width, self.cellSize.height)];
-    
+
     self.cellLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.cellSize.width, self.cellSize.height)];
     self.cellLabel.center = CGPointMake(containingView.frame.size.width/2, self.cellSize.height/2);
     self.cellLabel.textAlignment = NSTextAlignmentCenter;
     self.cellLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:self.cellLabel.font.pointSize];
     self.cellLabel.backgroundColor = [UIColor clearColor];
     [containingView addSubview: self.cellLabel];
-    
+
     self.containerView = containingView;
-    
+
     [containingView setTransform:CGAffineTransformMakeRotation(M_PI_2)];
     [self addSubview:containingView];
     if (self.cellSize.width != self.cellSize.height) {
